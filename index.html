@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Hair - Salão de Beleza</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+ 
+</head>
+<body class="h-full bg-gradient-to-br from-pink-50 to-purple-50">
+    <!-- Preloader -->
+    <div class="preloade" id="preloader">
+        <div class="loader-content">
+            <div class="loader-text">Beauty Hair</div>
+            <div class="loader-icons">
+                <div class="hair-strand"></div>
+                <div class="hair-strand"></div>
+                <div class="hair-strand"></div>
+                <div class="hair-strand"></div>
+                <div class="hair-strand"></div>
+                <i class="fas fa-cut scissors"></i>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-pink-500">Beauty Hair</div>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-pink-500 transition-colors">Início</a>
+                <a href="#services" class="text-gray-700 hover:text-pink-500 transition-colors">Serviços</a>
+                <a href="#agendamentos" class="text-gray-700 hover:text-pink-500 transition-colors">Agendamentos</a>
+               <!-- <a href="#gallery" class="text-gray-700 hover:text-pink-500 transition-colors">Galeria</a>-->
+                <a href="#about" class="text-gray-700 hover:text-pink-500 transition-colors">Quem Somos</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-pink-500 transition-colors">Depoimentos</a>
+                <a href="#custom-service" class="text-gray-700 hover:text-pink-500 transition-colors">Serviço Personalizado</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-500 transition-colors">Contato</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Menu Overlay -->
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+        
+        <!-- Mobile Sidebar Menu -->
+        <di class="mobile-menu" id="mobileMenu">
+            <div class="menu-header">
+                <div class="menu-logo">Beauty Hair</div>
+                <div class="menu-close" onclick="closeMobileMenu()"></div>
+            </div>
+            
+            <nav>
+                <a href="#home" onclick="closeMobileMenu()">🏠 Início</a>
+                <a href="#services" onclick="closeMobileMenu()">✨ Serviços</a>
+                <a href="#agendamentos" onclick="closeMobileMenu()">📸 Agendamento</a>
+            <!-- <a href="#gallery" onclick="closeMobileMenu()">📸 Galeria</a>-->
+                <a href="#about" onclick="closeMobileMenu()">👩‍💼 Quem Somos</a>
+                <a href="#testimonials" onclick="closeMobileMenu()">💬 Depoimentos</a>
+                <a href="#custom-service" onclick="closeMobileMenu()">🎯 Serviço Personalizado</a>
+                <a href="#contact" onclick="closeMobileMenu()">📞 Contato</a>
+            </nav>
+            
+         <div class="jumbotron">
+            <div class="menu-footer">
+           
+                <p>Siga-nos nas redes sociais</p>
+                <div class="menu-social">
+                    <a href="#" onclick="openWhatsApp('Olá! Vim através do site.')" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" onclick="openInstagram()" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-full flex items-center justify-center pt-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
+               
+                Beleza que <span class="text-pink-500">Transforma</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Descubra o melhor de você no Beauty Hair. Cuidamos da sua beleza com carinho e profissionalismo.
+            </p>
+            <button onclick="openWhatsApp('Olá! Gostaria de agendar um horário.')" 
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                Agende Agora
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Oferecemos uma ampla gama de serviços para realçar sua beleza natural</p>
+            </div>
+
+            <!-- Animated Services Table -->
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-white to-pink-50 rounded-3xl p-4 md:p-8 shadow-2xl border border-pink-100 overflow-hidden relative">
+                    <!-- Decorative background elements -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full opacity-20 -translate-y-16 translate-x-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-20 translate-y-12 -translate-x-12"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="overflow-x-auto">
+                            <table class="w-full min-w-full">
+                                <thead>
+                                    <tr class="border-b-3 border-gradient-to-r from-pink-300 to-purple-300">
+                                        <th class="text-left py-3 md:py-6 px-2 md:px-6 text-gray-800 font-bold text-sm md:text-lg bg-gradient-to-r from-pink-100 to-purple-100 rounded-tl-2xl">
+                                            <i class="fas fa-spa mr-1 md:mr-2 text-pink-500 text-xs md:text-base"></i><span class="hidden sm:inline">Serviço</span><span class="sm:hidden">Serv.</span>
+                                        </th>
+                                        <th class="text-left py-3 md:py-6 px-2 md:px-6 text-gray-800 font-bold text-sm md:text-lg bg-gradient-to-r from-pink-100 to-purple-100">
+                                            <i class="fas fa-clock mr-1 md:mr-2 text-purple-500 text-xs md:text-base"></i><span class="hidden sm:inline">Duração</span><span class="sm:hidden">Dur.</span>
+                                        </th>
+                                        <th class="text-left py-3 md:py-6 px-2 md:px-6 text-gray-800 font-bold text-sm md:text-lg bg-gradient-to-r from-pink-100 to-purple-100 rounded-tr-2xl">
+                                            <i class="fas fa-tag mr-1 md:mr-2 text-pink-500 text-xs md:text-base"></i>Preço
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="service-table-body">
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-cut text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Escova Progressiva</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-purple-100 text-purple-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">3h</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-pink-600 font-bold text-sm md:text-lg">R$ 130,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-palette text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Botox</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-pink-100 text-pink-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">2h</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-purple-600 font-bold text-sm md:text-lg">R$ 85,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-magic text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Cronograma Capilar</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-indigo-100 text-indigo-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">2h</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-indigo-600 font-bold text-sm md:text-lg">R$ 160,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-hand-sparkles text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Hidratação/Escova</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-rose-100 text-rose-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">1h30min</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-rose-600 font-bold text-sm md:text-lg">R$ 50,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-spa text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Hidratação/Cachos</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-emerald-100 text-emerald-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">45 min</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-emerald-600 font-bold text-sm md:text-lg">R$ 50,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-eye text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Tratamento pós Química</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-amber-100 text-amber-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">1h30min</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-amber-600 font-bold text-sm md:text-lg">R$ 65,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-tint text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Pedicure</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-cyan-100 text-cyan-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium"> 30 min</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-cyan-600 font-bold text-sm md:text-lg">R$ 25,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-crown text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Manicure</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-violet-100 text-violet-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">30 min</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-violet-600 font-bold text-sm md:text-lg">R$ 25,00</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-fuchsia-400 to-pink-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-paint-brush text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Pedicure + Manicure</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-fuchsia-100 text-fuchsia-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">50 min</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-fuchsia-600 font-bold text-sm md:text-lg">R$ 45,00</span>
+                                        </td>
+                                         <tr class="service-row hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 border-b border-pink-100">
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-700 font-medium">
+                                            <div class="flex items-center">
+                                                <div class="w-6 h-6 md:w-10 md:h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                                                    <i class="fas fa-palette text-white text-xs md:text-sm"></i>
+                                                </div>
+                                                <span class="text-xs md:text-base">Spá dos Pés</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6 text-gray-600">
+                                            <span class="bg-pink-100 text-pink-700 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">30 min</span>
+                                        </td>
+                                        <td class="py-3 md:py-5 px-2 md:px-6">
+                                            <span class="text-purple-600 font-bold text-sm md:text-lg">R$ 45,00</span>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">✨✨✨✨✨✨✨</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto"></p>
+            </div>
+
+            <!-- Image Slider -->
+            <div class="relative rounded-2xl overflow-hidden shadow-lg mb-16 image-slider" id="imageSlider">
+                <div class="slider-track flex transition-transform duration-500 ease-in-out" id="sliderTrack">
+                    <div class="slider-slide w-full flex-shrink-0">
+                        <div class="h-96 bg-gradient-to-r from-pink-300 to-purple-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-cut text-8xl mb-4"></i>
+                                <h3 class="text-3xl font-bold">Cortes Modernos</h3>
+                                <p class="text-lg mt-2">Estilos únicos e personalizados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-slide w-full flex-shrink-0">
+                        <div class="h-96 bg-gradient-to-r from-purple-300 to-indigo-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-palette text-8xl mb-4"></i>
+                                <h3 class="text-3xl font-bold">Colorações Exclusivas</h3>
+                                <p class="text-lg mt-2">Cores vibrantes e naturais</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-slide w-full flex-shrink-0">
+                        <div class="h-96 bg-gradient-to-r from-indigo-300 to-pink-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-spa text-8xl mb-4"></i>
+                                <h3 class="text-3xl font-bold">Tratamentos Premium</h3>
+                                <p class="text-lg mt-2">Cuidados especiais para seu cabelo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-slide w-full flex-shrink-0">
+                        <div class="h-96 bg-gradient-to-r from-rose-300 to-pink-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-hand-sparkles text-8xl mb-4"></i>
+                                <h3 class="text-3xl font-bold">Cuidados com Unhas</h3>
+                                <p class="text-lg mt-2">Manicure e pedicure profissional</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-slide w-full flex-shrink-0">
+                        <div class="h-96 bg-gradient-to-r from-emerald-300 to-teal-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-magic text-8xl mb-4"></i>
+                                <h3 class="text-3xl font-bold">Escova  Progressiva</h3>
+                                <p class="text-lg mt-2">Para todas as ocasiões especiais</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Controls -->
+                <button onclick="previousImage()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-pink-500 p-4 rounded-full shadow-xl transition-all hover:scale-110 z-10">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                <button onclick="nextImage()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-pink-500 p-4 rounded-full shadow-xl transition-all hover:scale-110 z-10">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+                
+                <!-- Slider Indicators -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <button onclick="goToImage(0)" class="slider-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="0"></button>
+                    <button onclick="goToImage(1)" class="slider-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="1"></button>
+                    <button onclick="goToImage(2)" class="slider-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="2"></button>
+                    <button onclick="goToImage(3)" class="slider-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="3"></button>
+                    <button onclick="goToImage(4)" class="slider-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="4"></button>
+                </div>
+            </div>
+
+            <!-- Enhanced Service Cards Grid -->
+             <div id="agendamentos"></div>
+             <section class="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Agendamentos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Agende seu horário com a Beauty Hair. Nossa equipe está pronta para cuidar de você.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8" id="agendamento">
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-300/20 to-purple-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-cut text-3xl md:text-6xl text-pink-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Cortes Modernos</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Cortes personalizados que valorizam seu estilo único</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-pink-500 font-semibold text-xs md:text-base">A partir de R$ 80</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar um corte moderno.')" class="bg-pink-500 text-white px-3 py-1 rounded-full text-xs hover:bg-pink-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-purple-200 to-pink-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-300/20 to-pink-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-palette text-3xl md:text-6xl text-purple-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Botox Capilar</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Não perca tempo com cabelos rebeldes, agende seu botox capilare sinta a diferença .</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-purple-500 font-semibold text-xs md:text-base">A partir de R$ 85,00</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar um Botox capilar.')" class="bg-purple-500 text-white px-3 py-1 rounded-full text-xs hover:bg-purple-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-pink-200 to-rose-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-300/20 to-rose-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-hand-sparkles text-3xl md:text-6xl text-rose-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Cuidados com as Unhas</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Manicure e pedicure com produtos de alta qualidade</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-rose-500 font-semibold text-xs md:text-base">A partir de R$ 45</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar manicure/pedicure.')" class="bg-rose-500 text-white px-3 py-1 rounded-full text-xs hover:bg-rose-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-purple-200 to-indigo-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-300/20 to-indigo-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-spa text-3xl md:text-6xl text-indigo-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Cronograma Capilar</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Hidratação e reconstrução para cabelos saudáveis</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-indigo-500 font-semibold text-xs md:text-base">A partir de R$ 160</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar um Cronograma Capilar.')" class="bg-indigo-500 text-white px-3 py-1 rounded-full text-xs hover:bg-indigo-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-emerald-200 to-teal-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-300/20 to-teal-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-magic text-3xl md:text-6xl text-emerald-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Escova Progressiva</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Alisamento natural e duradouro para todos os tipos de cabelo</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-emerald-500 font-semibold text-xs md:text-base">A partir de R$ 130,00</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar uma escova progressiva.')" class="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs hover:bg-emerald-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-amber-200 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-300/20 to-orange-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-eye text-3xl md:text-6xl text-amber-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Hidratação / Escova</em></h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Hidratação e reconstrução capilar  que realça o seu brilho </p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-amber-500 font-semibold text-xs md:text-base">A partir de R$ 50,00</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar hidratação / escova.')" class="bg-amber-500 text-white px-3 py-1 rounded-full text-xs hover:bg-amber-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-violet-200 to-purple-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-violet-300/20 to-purple-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-crown text-3xl md:text-6xl text-violet-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Hidratação / Cachos</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Cansada da falta de definição e do toque áspero? Seus cachos merecem o nosso tratamento.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-violet-500 font-semibold text-xs md:text-base">A partir de R$ 50,00</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar uma Hidratação / Cachos.')" class="bg-violet-500 text-white px-3 py-1 rounded-full text-xs hover:bg-violet-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-fuchsia-200 to-pink-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-300/20 to-pink-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-paint-brush text-3xl md:text-6xl text-fuchsia-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Tratamento pós química</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Fortalecimento capilar pós-químico, nutrição profunda para fios fragilizados.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-fuchsia-500 font-semibold text-xs md:text-base">A partir de R$ 65,00</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar um tratamento pós química.')" class="bg-fuchsia-500 text-white px-3 py-1 rounded-full text-xs hover:bg-fuchsia-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="h-32 md:h-64 bg-gradient-to-br from-cyan-200 to-blue-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-300/20 to-blue-300/20 group-hover:scale-110 transition-transform duration-500"></div>
+                        <i class="fas fa-gem text-3xl md:text-6xl text-cyan-500 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-3 md:p-6">
+                        <h3 class="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">Spá dos pés</h3>
+                        <p class="text-xs md:text-base text-gray-600 mb-2 md:mb-3 hidden md:block">Cansada de pés ressecados e doloridos? Experimente nosso spa dos pés e sinta a diferença! </p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-cyan-500 font-semibold text-xs md:text-base">A partir de R$ 45,00</div>
+                            <button onclick="openWhatsApp('Olá! Gostaria de agendar spá dos pés.')" class="bg-cyan-500 text-white px-3 py-1 rounded-full text-xs hover:bg-cyan-600 transition-colors">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  <!-- Header
+        <div id="gallery">
+        <header class="text-center py-8 px-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                ✨ Galeria de Fotos
+            </h1>
+            <p class="text-gray-600 text-lg">Transforme sua beleza conosco</p></div>
+        </header>
+
+        <!-- Gallery 
+        <!-- <section class="gallery-container px-4 py-8">
+            <div class="max-w-6xl mx-auto">
+                <!-- Grid: 2 columns on mobile, 3 on tablet, 4 on desktop 
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    
+                    <!-- Corte de Cabelo 
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div class="aspect-square bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center relative">
+                            <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                            <div class="service-badge absolute top-2 right-2 text-white text-xs px-2 py-1 rounded-full">
+                                Popular
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Corte & Escova</h3>
+                            <p class="text-sm text-gray-600">Cortes modernos e escova profissional</p>
+                        </div>
+                    </div>
+
+                    <!-- Coloração
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg" onclick="openModal('Coloração', 'Tintura, luzes e mechas', 'bg-gradient-to-br from-purple-200 to-purple-300', 'M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zM6.5 12c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z', 'text-purple-600')">
+                        <div class="aspect-square bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
+                            <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Coloração</h3>
+                            <p class="text-sm text-gray-600">Tintura, luzes e mechas</p>
+                        </div>
+                    </div>
+
+                    <!-- Manicure 
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg" onclick="openModal('Manicure', 'Esmaltação e cuidados das unhas', 'bg-gradient-to-br from-rose-200 to-rose-300', 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z', 'text-rose-600')">
+                        <div class="aspect-square bg-gradient-to-br from-rose-200 to-rose-300 flex items-center justify-center">
+                            <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Manicure</h3>
+                            <p class="text-sm text-gray-600">Esmaltação e cuidados das unhas</p>
+                        </div>
+                    </div>
+
+                    <!-- Pedicure 
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg" onclick="openModal('Pedicure', 'Cuidados completos para os pés', 'bg-gradient-to-br from-indigo-200 to-indigo-300', 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z', 'text-indigo-600')">
+                        <div class="aspect-square bg-gradient-to-br from-indigo-200 to-indigo-300 flex items-center justify-center">
+                             <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Pedicure</h3>
+                            <p class="text-sm text-gray-600">Cuidados completos para os pés</p>
+                        </div>
+                    </div>
+
+                    <!-- Sobrancelha 
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg" onclick="openModal('Sobrancelha', 'Design e modelagem', 'bg-gradient-to-br from-amber-200 to-amber-300', 'M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z', 'text-amber-600')">
+                        <div class="aspect-square bg-gradient-to-br from-amber-200 to-amber-300 flex items-center justify-center">
+                           <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Sobrancelha</h3>
+                            <p class="text-sm text-gray-600">Design e modelagem</p>
+                        </div>
+                    </div>
+
+                    <!-- Hidratação 
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg" onclick="openModal('Hidratação', 'Tratamentos capilares intensivos', 'bg-gradient-to-br from-teal-200 to-teal-300', 'M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z', 'text-teal-600')">
+                        <div class="aspect-square bg-gradient-to-br from-teal-200 to-teal-300 flex items-center justify-center">
+                             <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Hidratação</h3>
+                            <p class="text-sm text-gray-600">Tratamentos capilares intensivos</p>
+                        </div>
+                    </div>
+
+                    <!-- Maquiagem 
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg" onclick="openModal('Maquiagem', 'Make profissional para eventos', 'bg-gradient-to-br from-fuchsia-200 to-fuchsia-300', 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z', 'text-fuchsia-600')">
+                        <div class="aspect-square bg-gradient-to-br from-fuchsia-200 to-fuchsia-300 flex items-center justify-center">
+                            <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Maquiagem</h3>
+                            <p class="text-sm text-gray-600">Make profissional para eventos</p>
+                        </div>
+                    </div>
+
+                    <!-- Massagem 
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-lg" onclick="openModal('Massagem', 'Relaxamento e bem-estar', 'bg-gradient-to-br from-emerald-200 to-emerald-300', 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z', 'text-emerald-600')">
+                        <div class="aspect-square bg-gradient-to-br from-emerald-200 to-emerald-300 flex items-center justify-center">
+                            <img class="imagem" src="img/1.jpg" fill="currentColor" viewBox="0 0 24 24">  
+                                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </img>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800 mb-1">Massagem</h3>
+                            <p class="text-sm text-gray-600">Relaxamento e bem-estar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <!-- Call to Action -->
+        <section class="text-center py-8 px-4">
+            <div class="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                    💖 Agende seu horário
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    Entre em contato e transforme sua beleza conosco!
+                </p>
+               
+                        <button onclick="openWhatsApp('Olá! Gostaria de agendar um horário.')" 
+                                class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Agendar via WhatsApp
+                        </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalImage" class="modal-image"></div>
+            <div class="text-center mt-4">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-800 mb-2"></h3>
+                <p id="modalDescription" class="text-gray-600"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">✨Quem Somos✨</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Conheça a história por trás do Beauty Hair e nossa paixão pela beleza</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Manuela Ferreira</h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Fundadora e proprietária do Beauty Hair, Manuela tem mais de 1 ano de experiência no mundo da beleza. 
+                            Formada em Cabeleireira e especializada em manicure e pedicure, ela transformou sua paixão em um negócio que 
+                            já atendeu mais de 500 clientes satisfeitas.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            "Minha missão é fazer cada cliente se sentir única e especial. Acredito que a beleza vai além da aparência - 
+                            é sobre autoestima, confiança e bem-estar. No Beauty Hair, cada pessoa é tratada como família."
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-award text-pink-500"></i>
+                                <span class="text-gray-700">Certificada em Cabeleireira</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-star text-pink-500"></i>
+                                <span class="text-gray-700">Mais de 1 ano de experiência</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-heart text-pink-500"></i>
+                                <span class="text-gray-700">Mais de 500 clientes atendidas</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2">
+                        <div class="relative">
+                            <img src="img/perfil.jpg"  class="w-full h-120 bg-gradient-to-br from-pink-200 to-purple-200 rounded-2xl flex items-center justify-center shadow-2xl">
+                                <div class="text-center text-gray-600">
+                                 
+                                    <h4 class="text-2xl font-semibold">Manuela Ferreira</h4>
+                                    <p class="text-lg">Proprietária & Fundadora</p>
+                                </div>
+                            </img>
+                            <!-- Decorative elements -->
+                            <div class="absolute -top-4 -right-4 w-20 h-20 bg-pink-300 rounded-full opacity-50"></div>
+                            <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-300 rounded-full opacity-50"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Depoimentos -->
+    <section id="testimonials" class="py-20 bg-white">
+    
+        <h2 class="text-4xl font-bold text-center text-black-600 mb-16">
+          O Que Dizem Nossos Clientes
+        </h2>
+        <div class="relative max-w-4xl mx-auto">
+          <div class="testimonial-carousel overflow-hidden rounded-lg">
+            <div
+              class="testimonial-track flex transition-transform duration-500 ease-in-out"
+              id="testimonialTrack"
+            >
+              <div
+                class="testimonial-slide min-w-full flex-shrink-0 px-2 sm:px-4 flex justify-center items-center"
+              >
+                <div
+                  class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-pink-100 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto relative overflow-hidden"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-purple-500"
+                  ></div>
+                  <div class="text-center">
+                    <div
+                      class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg"
+                    >
+                      <i
+                        class="fas fa-quote-left text-white text-sm sm:text-lg"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 font-medium px-2"
+                    >
+                      "Atendimento excepcional! Saio sempre renovada e feliz.
+                      Recomendo muito!"
+                    </p>
+                    <div
+                      class="text-yellow-400 mb-2 sm:mb-3 text-sm sm:text-base"
+                    >
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="border-t border-pink-100 pt-2 sm:pt-3">
+                      <h4 class="text-sm sm:text-base font-bold text-gray-800">
+                        Maria Silva
+                      </h4>
+                      <p class="text-xs text-pink-600 font-medium">
+                        Cliente Satisfeita
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide min-w-full flex-shrink-0 px-2 sm:px-4 flex justify-center items-center"
+              >
+                <div
+                  class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-purple-100 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto relative overflow-hidden"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"
+                  ></div>
+                  <div class="text-center">
+                    <div
+                      class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg"
+                    >
+                      <i
+                        class="fas fa-quote-left text-white text-sm sm:text-lg"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 font-medium px-2"
+                    >
+                      "Profissionais incríveis! Meu cabelo nunca esteve tão
+                      bonito. Ambiente acolhedor!"
+                    </p>
+                    <div
+                      class="text-yellow-400 mb-2 sm:mb-3 text-sm sm:text-base"
+                    >
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="border-t border-purple-100 pt-2 sm:pt-3">
+                      <h4 class="text-sm sm:text-base font-bold text-gray-800">
+                        Ana Costa
+                      </h4>
+                      <p class="text-xs text-purple-600 font-medium">
+                        Cliente Satisfeita
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <div
+                class="testimonial-slide min-w-full flex-shrink-0 px-2 sm:px-4 flex justify-center items-center"
+              >
+                <div
+                  class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-pink-100 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto relative overflow-hidden"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-purple-500"
+                  ></div>
+                  <div class="text-center">
+                    <div
+                      class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg"
+                    >
+                      <i
+                        class="fas fa-quote-left text-white text-sm sm:text-lg"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 font-medium px-2"
+                    >
+                      "Atendimento excepcional! Saio sempre renovada e feliz.
+                      Recomendo muito!"
+                    </p>
+                    <div
+                      class="text-yellow-400 mb-2 sm:mb-3 text-sm sm:text-base"
+                    >
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="border-t border-pink-100 pt-2 sm:pt-3">
+                      <h4 class="text-sm sm:text-base font-bold text-gray-800">
+                        Maria Silva
+                      </h4>
+                      <p class="text-xs text-pink-600 font-medium">
+                        Cliente Satisfeita
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide min-w-full flex-shrink-0 px-2 sm:px-4 flex justify-center items-center"
+              >
+                <div
+                  class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-purple-100 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto relative overflow-hidden"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"
+                  ></div>
+                  <div class="text-center">
+                    <div
+                      class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg"
+                    >
+                      <i
+                        class="fas fa-quote-left text-white text-sm sm:text-lg"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 font-medium px-2"
+                    >
+                      "Profissionais incríveis! Meu cabelo nunca esteve tão
+                      bonito. Ambiente acolhedor!"
+                    </p>
+                    <div
+                      class="text-yellow-400 mb-2 sm:mb-3 text-sm sm:text-base"
+                    >
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="border-t border-purple-100 pt-2 sm:pt-3">
+                      <h4 class="text-sm sm:text-base font-bold text-gray-800">
+                        Ana Costa
+                      </h4>
+                      <p class="text-xs text-purple-600 font-medium">
+                        Cliente Satisfeita
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide min-w-full flex-shrink-0 px-2 sm:px-4 flex justify-center items-center"
+              >
+                <div
+                  class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-pink-100 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto relative overflow-hidden"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-purple-500"
+                  ></div>
+                  <div class="text-center">
+                    <div
+                      class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg"
+                    >
+                      <i
+                        class="fas fa-quote-left text-white text-sm sm:text-lg"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 font-medium px-2"
+                    >
+                      "Melhor salão da região! Cuidado, carinho e resultado
+                      perfeito sempre!"
+                    </p>
+                    <div
+                      class="text-yellow-400 mb-2 sm:mb-3 text-sm sm:text-base"
+                    >
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="border-t border-pink-100 pt-2 sm:pt-3">
+                      <h4 class="text-sm sm:text-base font-bold text-gray-800">
+                        Carla Santos
+                      </h4>
+                      <p class="text-xs text-pink-600 font-medium">
+                        Cliente Satisfeita
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide min-w-full flex-shrink-0 px-2 sm:px-4 flex justify-center items-center"
+              >
+                <div
+                  class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-purple-100 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto relative overflow-hidden"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"
+                  ></div>
+                  <div class="text-center">
+                    <div
+                      class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg"
+                    >
+                      <i
+                        class="fas fa-quote-left text-white text-sm sm:text-lg"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 font-medium px-2"
+                    >
+                      "Excelente atendimento! Preços justos e qualidade
+                      excepcional. Virei cliente fiel!"
+                    </p>
+                    <div
+                      class="text-yellow-400 mb-2 sm:mb-3 text-sm sm:text-base"
+                    >
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="border-t border-purple-100 pt-2 sm:pt-3">
+                      <h4 class="text-sm sm:text-base font-bold text-gray-800">
+                        Juliana Lima
+                      </h4>
+                      <p class="text-xs text-purple-600 font-medium">
+                        Cliente Satisfeita
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide min-w-full flex-shrink-0 px-2 sm:px-4 flex justify-center items-center"
+              >
+                <div
+                  class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-pink-100 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto relative overflow-hidden"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-purple-500"
+                  ></div>
+                  <div class="text-center">
+                    <div
+                      class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center shadow-lg"
+                    >
+                      <i
+                        class="fas fa-quote-left text-white text-sm sm:text-lg"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 font-medium px-2"
+                    >
+                      "Ambiente super aconchegante! Sempre saio de lá me
+                      sentindo uma nova mulher!"
+                    </p>
+                    <div
+                      class="text-yellow-400 mb-2 sm:mb-3 text-sm sm:text-base"
+                    >
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="border-t border-pink-100 pt-2 sm:pt-3">
+                      <h4 class="text-sm sm:text-base font-bold text-gray-800">
+                        Fernanda Oliveira
+                      </h4>
+                      <p class="text-xs text-pink-600 font-medium">
+                        Cliente Satisfeita
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            onclick="prevTestimonial()"
+          >
+            <i class="fas fa-chevron-left text-pink-600 text-xl"></i>
+          </button>
+          <button
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            onclick="nextTestimonial()"
+          >
+            <i class="fas fa-chevron-right text-pink-600 text-xl"></i>
+          </button>
+
+          <!-- Dots Indicator -->
+          <div class="flex justify-center mt-8 space-x-2">
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(0)"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(1)"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(2)"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(3)"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(4)"
+            ></button>
+             <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(5)"
+               <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(6)"
+            ></button>
+             <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all"
+              onclick="goToTestimonial(4)"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Custom Service Section -->
+    <section id="custom-service" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">Serviço Personalizado</h2>
+                <p class="text-gray-600 mb-8 text-lg">Não encontrou o que procura? Conte-nos o que você deseja e criaremos um serviço especial para você!</p>
+                
+                <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 shadow-lg">
+                    <form id="customServiceForm" class="space-y-6">
+                        <div>
+                            <label class="block text-left text-gray-700 font-semibold mb-2">Seu Nome</label>
+                            <input type="text" id="customerName" class="w-full p-4 border border-pink-200 rounded-lg focus:outline-none focus:border-pink-400" placeholder="Digite seu nome" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-left text-gray-700 font-semibold mb-2">Seu Telefone</label>
+                            <input type="tel" id="customerPhone" class="w-full p-4 border border-pink-200 rounded-lg focus:outline-none focus:border-pink-400" placeholder="(11) 99999-9999" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-left text-gray-700 font-semibold mb-2">Serviço Desejado</label>
+                            <select id="serviceSelect" class="w-full p-4 border border-pink-200 rounded-lg focus:outline-none focus:border-pink-400" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="Corte Feminino - R$ 80">Corte Feminino - R$ 80</option>
+                                <option value="Coloração - R$ 150">Coloração - R$ 150</option>
+                                <option value="Escova Progressiva - R$ 200">Escova Progressiva - R$ 200</option>
+                                <option value="Manicure - R$ 35">Manicure - R$ 35</option>
+                                <option value="Pedicure - R$ 40">Pedicure - R$ 40</option>
+                                <option value="Sobrancelha - R$ 25">Sobrancelha - R$ 25</option>
+                                <option value="Hidratação - R$ 120">Hidratação - R$ 120</option>
+                                <option value="Penteado - R$ 100">Penteado - R$ 100</option>
+                                <option value="Maquiagem - R$ 80">Maquiagem - R$ 80</option>
+                                <option value="Outro">Outro (especificar abaixo)</option>
+                            </select>
+                        </div>
+
+                         <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-left text-gray-700 font-semibold mb-2">Data Preferida</label>
+                                <input type="date" id="preferredDate" class="w-full p-4 border border-pink-200 rounded-lg focus:outline-none focus:border-pink-400" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-left text-gray-700 font-semibold mb-2">Horário Preferido</label>
+                                <select id="preferredTime" class="w-full p-4 border border-pink-200 rounded-lg focus:outline-none focus:border-pink-400" required>
+                                    <option value="">Selecione um horário</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="09:30">09:30</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:30">10:30</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="15:30">15:30</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="16:30">16:30</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-left text-gray-700 font-semibold mb-2">Serviço Personalizado (se selecionou "Outro")</label>
+                            <textarea id="customService" rows="3" class="w-full p-4 border border-pink-200 rounded-lg focus:outline-none focus:border-pink-400" placeholder="Descreva o serviço que você gostaria..."></textarea>
+                        </div>
+
+                       
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Agendar via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos aqui para cuidar da sua beleza. Agende seu horário!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Endereço</h4>
+                            <p class="text-gray-600">Rua Vereador Ruy Loureiro, 101 - Boqueirão , Rio Bonito-RJ</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Telefone</h4>
+                            <p class="text-gray-600">(21) 9 8243-3943</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-clock text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Horário</h4>
+                            <p class="text-gray-600">Seg-Sáb: 9h às 18h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Agende Agora</h3>
+                    <div class="space-y-4">
+                        <button onclick="openWhatsApp('Olá! Gostaria de agendar um horário para corte.')" 
+                                class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Agendar via WhatsApp
+                        </button>
+                        
+                        <button onclick="openInstagram()" 
+                                class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <i class="fab fa-instagram mr-2"></i>
+                            Seguir no Instagram
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="mb-8">
+                    <h3 class="text-3xl font-bold text-pink-400 mb-4">Beauty Hair</h3>
+                    <p class="text-gray-300 max-w-2xl mx-auto">Transformando vidas através da beleza. Venha descobrir o melhor de você conosco!</p>
+                </div>
+
+                <div class="flex justify-center space-x-6 mb-8">
+                    <button onclick="openWhatsApp('Olá! Vim através do site.')" 
+                            class="bg-green-500 hover:bg-green-600 p-4 rounded-full transition-colors duration-300">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </button>
+                    
+                    <button onclick="openInstagram()" 
+                            class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-4 rounded-full transition-all duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </button>
+                </div>
+
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-gray-400">&copy; 2025 Beauty Hair. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" onclick="openWhatsApp('Olá! Vim através do site.')" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+
+ // Preloader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('fade-out');
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 3000);
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        function closeMobileMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Image Slider
+        let currentImageSlide = 0;
+        const imageSlides = document.querySelectorAll('.slider-slide');
+        const totalImageSlides = imageSlides.length;
+        let imageStartX = 0;
+        let imageEndX = 0;
+        let imageIsDragging = false;
+
+        function updateImageSlider() {
+            const track = document.getElementById('sliderTrack');
+            track.style.transform = `translateX(-${currentImageSlide * 100}%)`;
+            
+            // Update indicators
+            const indicators = document.querySelectorAll('.slider-indicator');
+            indicators.forEach((indicator, index) => {
+                if (index === currentImageSlide) {
+                    indicator.classList.remove('bg-white/50');
+                    indicator.classList.add('bg-white');
+                } else {
+                    indicator.classList.remove('bg-white');
+                    indicator.classList.add('bg-white/50');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImageSlide = (currentImageSlide + 1) % totalImageSlides;
+            updateImageSlider();
+        }
+
+        function previousImage() {
+            currentImageSlide = (currentImageSlide - 1 + totalImageSlides) % totalImageSlides;
+            updateImageSlider();
+        }
+
+        function goToImage(slideIndex) {
+            currentImageSlide = slideIndex;
+            updateImageSlider();
+        }
+
+        // Touch/Swipe functionality for image slider
+        const imageSlider = document.getElementById('imageSlider');
+
+        imageSlider.addEventListener('touchstart', (e) => {
+            imageStartX = e.touches[0].clientX;
+            imageIsDragging = true;
+        });
+
+        imageSlider.addEventListener('touchmove', (e) => {
+            if (!imageIsDragging) return;
+            e.preventDefault();
+        });
+
+        imageSlider.addEventListener('touchend', (e) => {
+            if (!imageIsDragging) return;
+            imageEndX = e.changedTouches[0].clientX;
+            handleImageSwipe();
+            imageIsDragging = false;
+        });
+
+        // Mouse drag functionality for desktop
+        imageSlider.addEventListener('mousedown', (e) => {
+            imageStartX = e.clientX;
+            imageIsDragging = true;
+        });
+
+        imageSlider.addEventListener('mousemove', (e) => {
+            if (!imageIsDragging) return;
+            e.preventDefault();
+        });
+
+        imageSlider.addEventListener('mouseup', (e) => {
+            if (!imageIsDragging) return;
+            imageEndX = e.clientX;
+            handleImageSwipe();
+            imageIsDragging = false;
+        });
+
+        imageSlider.addEventListener('mouseleave', () => {
+            if (imageIsDragging) {
+                imageIsDragging = false;
+            }
+        });
+
+        function handleImageSwipe() {
+            const threshold = 50; // Minimum distance for swipe
+            const diff = imageStartX - imageEndX;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    // Swipe left - next slide
+                    nextImage();
+                } else {
+                    // Swipe right - previous slide
+                    previousImage();
+                }
+            }
+        }
+
+        // Initialize image slider
+        updateImageSlider();
+
+        // Auto-advance image slider
+        let autoImageSlide = setInterval(nextImage, 4000);
+
+        // Pause auto-advance on interaction
+        imageSlider.addEventListener('mouseenter', () => {
+            clearInterval(autoImageSlide);
+        });
+
+        imageSlider.addEventListener('mouseleave', () => {
+            autoImageSlide = setInterval(nextImage, 4000);
+        });
+
+        // Custom Service Form
+        document.getElementById('customServiceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('customerName').value;
+            const phone = document.getElementById('customerPhone').value;
+            const serviceSelect = document.getElementById('serviceSelect').value;
+            const customService = document.getElementById('customService').value;
+            const date = document.getElementById('preferredDate').value;
+            const time = document.getElementById('preferredTime').value;
+            
+            if (name && phone && serviceSelect && date && time) {
+                let service = serviceSelect;
+                if (serviceSelect === 'Outro' && customService) {
+                    service = customService;
+                } else if (serviceSelect === 'Outro' && !customService) {
+                    // Create custom modal instead of alert
+                    showCustomModal('Por favor, descreva o serviço personalizado.');
+                    return;
+                }
+                
+                // Format date to Brazilian format
+                const dateObj = new Date(date);
+                const formattedDate = dateObj.toLocaleDateString('pt-BR');
+                
+                const message = `Olá! Meu nome é ${name}.\n📱 Telefone: ${phone}\n\n🌟 Gostaria de agendar:\n📋 Serviço: ${service}\n📅 Data: ${formattedDate}\n🕐 Horário: ${time}\n\nAguardo confirmação!`;
+                openWhatsApp(message);
+                
+                // Show success message
+                showCustomModal('Redirecionando para o WhatsApp...', 'success');
+            }
+        });
+
+        // Custom Modal Function (replaces alert)
+        function showCustomModal(message, type = 'info') {
+            // Remove existing modal if any
+            const existingModal = document.getElementById('customModal');
+            if (existingModal) {
+                existingModal.remove();
+            }
+
+            // Create modal
+            const modal = document.createElement('div');
+            modal.id = 'customModal';
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            
+            const modalContent = document.createElement('div');
+            modalContent.className = `bg-white rounded-2xl p-8 max-w-md mx-4 text-center ${type === 'success' ? 'border-l-4 border-green-500' : 'border-l-4 border-pink-500'}`;
+            
+            modalContent.innerHTML = `
+                <div class="mb-4">
+                    <i class="fas ${type === 'success' ? 'fa-check-circle text-green-500' : 'fa-info-circle text-pink-500'} text-4xl mb-4"></i>
+                    <p class="text-gray-700 text-lg">${message}</p>
+                </div>
+                <button onclick="closeCustomModal()" class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all">
+                    OK
+                </button>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            // Auto close after 3 seconds for success messages
+            if (type === 'success') {
+                setTimeout(closeCustomModal, 3000);
+            }
+        }
+
+        function closeCustomModal() {
+            const modal = document.getElementById('customModal');
+            if (modal) {
+                modal.remove();
+            }
+        }
+
+        // Set minimum date to today
+        document.getElementById('preferredDate').min = new Date().toISOString().split('T')[0];
+
+        // WhatsApp Function
+        function openWhatsApp(message) {
+            const phoneNumber = '5521982433943'; // Substitua pelo número real
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+        }
+
+        // Instagram Function
+        function openInstagram() {
+            const instagramURL = 'https://instagram.com/beautyhair'; // Substitua pelo perfil real
+            window.open(instagramURL, '_blank', 'noopener,noreferrer');
+        }
+
+        // Carousel
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel-slide");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        const carousel = document.getElementById("carousel");
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      // Auto carousel
+      setInterval(nextSlide, 4000);
+
+ // Testimonials Carousel
+      let currentTestimonial = 0;
+      const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+      const totalTestimonials = testimonialSlides.length;
+      const testimonialDots = document.querySelectorAll(".testimonial-dot");
+
+      function showTestimonial(index) {
+        const testimonialTrack = document.getElementById("testimonialTrack");
+        testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+
+        // Update dots
+        testimonialDots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.remove("bg-pink-300");
+            dot.classList.add("bg-pink-600");
+          } else {
+            dot.classList.remove("bg-pink-600");
+            dot.classList.add("bg-pink-300");
+          }
+        });
+      }
+
+      function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+        showTestimonial(currentTestimonial);
+      }
+
+      function prevTestimonial() {
+        currentTestimonial =
+          (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+        showTestimonial(currentTestimonial);
+      }
+
+      function goToTestimonial(index) {
+        currentTestimonial = index;
+        showTestimonial(currentTestimonial);
+      }
+
+      // Initialize testimonials carousel
+      showTestimonial(0);
+
+      // Auto testimonials carousel
+      setInterval(nextTestimonial, 2000);
+
+    </script>
+
+   <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98eb3cf642adb026',t:'MTc2MDQ4ODU0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
