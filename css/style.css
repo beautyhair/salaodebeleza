@@ -324,6 +324,17 @@
             transform: translateX(5px) scale(0.98);
         }
 
+        /* Imagem do Natal Agendamento */
+        .agendamento{
+            width: 100vh;
+            margin-top: 15px;
+            border-radius: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
         /* Menu Footer */
         .menu-footer {
             padding: 1rem;
