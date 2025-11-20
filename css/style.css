@@ -326,14 +326,40 @@
 
         /* Imagem do Natal Agendamento */
         .agendamento{
-            width: 100vh;
-            margin-top: 15px;
+            width: 80vh;
+            margin: 0 auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
             border-radius: 5%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            
         }
+
+       .text-center{
+        margin-top: 4%;
+        margin-bottom: 5%;
+
+        align-items: center;
+       
+       
+       }
+      
+        .promo {
+            width: 80vh;
+            margin: 0 auto;
+            margin-top: 5%;
+            margin-bottom: -5%;
+            border-radius: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+
+            
+        }
+      
 
         /* Menu Footer */
         .menu-footer {
